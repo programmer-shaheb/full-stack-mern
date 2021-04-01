@@ -40,6 +40,10 @@ const AddProduct = () => {
         console.log(data);
       });
 
+    setImgURL("");
+    setPrice("");
+    setProductName("");
+    setWeight("");
     console.log(productData);
   };
 
@@ -109,9 +113,23 @@ const AddProduct = () => {
                     />
                   </div>
                   <div className="col-12 mt-5 ">
-                    <button className="btn btn-primary" type="submit">
-                      Submit
-                    </button>
+                    {imgURL ? (
+                      <>
+                        <button className="btn btn-primary" type="submit">
+                          Submit
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className="btn btn-primary"
+                          disabled
+                          type="submit"
+                        >
+                          Submit
+                        </button>
+                      </>
+                    )}
                   </div>
                 </form>
               </div>
