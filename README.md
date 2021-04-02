@@ -1,6 +1,6 @@
 # Hungry Helpers
 
-This project was bootstrapped with [Hungry Helpers]().
+This project was bootstrapped with [Hungry Helpers](https://hungry-helpers.web.app).
 
 ## Features
 

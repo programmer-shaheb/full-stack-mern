@@ -12,7 +12,7 @@ const Order = () => {
     )
       .then((res) => res.json())
       .then((data) => setOrderDetails(data));
-  }, []);
+  }, [orderDetails]);
 
   return (
     <>
