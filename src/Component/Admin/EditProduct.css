@@ -1,5 +1,15 @@
 .editProduct {
   position: absolute;
   left: 300px;
-  top: 100px;
+  top: 50px;
+}
+
+.editProduct h1 {
+  font-weight: bold;
+  color: #001327;
+  margin-bottom: 10px;
+}
+
+.tab-case {
+  width: 1000px;
 }

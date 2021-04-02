@@ -48,8 +48,14 @@ const Login = () => {
                 {!isLoggedIn ? (
                   <>
                     <button
-                      className="btn btn-outline-info"
-                      style={{ borderRadius: "20px" }}
+                      className="btn btn-info "
+                      style={{
+                        borderRadius: "20px",
+                        marginTop: "150px",
+                        padding: "20px",
+                        fontWeight: "bolder",
+                        fontSize: "30px",
+                      }}
                       onClick={handleGoogleLogin}
                     >
                       Continue With Google
@@ -58,11 +64,17 @@ const Login = () => {
                 ) : (
                   <>
                     <button
-                      className="btn btn-outline-danger"
-                      style={{ borderRadius: "20px" }}
+                      className="btn btn-danger mt-5"
+                      style={{
+                        borderRadius: "20px",
+                        marginTop: "150px",
+                        padding: "20px",
+                        fontWeight: "bolder",
+                        fontSize: "30px",
+                      }}
                       onClick={handleLogOut}
                     >
-                      Sign Out
+                      Log Out
                     </button>
                   </>
                 )}

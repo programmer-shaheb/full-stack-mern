@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../../node_modules/jquery/dist/jquery.min";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { userContext } from "../../App";
 
 const Navbar = () => {
+  const [isLoggedIn, setIsloggedIn] = useContext(userContext);
   return (
     <>
       <div className="container-fluid">
@@ -53,13 +55,27 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink
-                      className="nav-link login-btn"
-                      style={{ padding: "10px 20px" }}
-                      to="/login"
-                    >
-                      Login
-                    </NavLink>
+                    {!isLoggedIn ? (
+                      <>
+                        <NavLink
+                          className="nav-link login-btn"
+                          style={{ padding: "10px 20px" }}
+                          to="/login"
+                        >
+                          Login
+                        </NavLink>
+                      </>
+                    ) : (
+                      <>
+                        <NavLink
+                          className="nav-link login-btn"
+                          style={{ padding: "10px 20px" }}
+                          to="/login"
+                        >
+                          Log Out
+                        </NavLink>
+                      </>
+                    )}
                   </li>
                 </ul>
               </div>

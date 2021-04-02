@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Products from "./Products";
-import loader from "../../Loader/animation_500_kmyw3krn.gif";
 
 const Home = () => {
   const [products, setProducts] = useState([]);

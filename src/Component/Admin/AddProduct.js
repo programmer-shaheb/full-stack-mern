@@ -44,7 +44,6 @@ const AddProduct = () => {
     setPrice("");
     setProductName("");
     setWeight("");
-    console.log(productData);
   };
 
   return (
@@ -55,14 +54,14 @@ const AddProduct = () => {
         <div className="container-fluid">
           <div className="row">
             <div
-              className="col-10 mx-auto  d-flex justify-content-center align-items-center"
-              style={{ minHeight: "80vh" }}
+              className="col-10 mx-auto d-flex justify-content-center align-items-center"
+              style={{ minHeight: "50vh" }}
             >
-              <div className="w-100 text-center" style={{ maxWidth: "1000px" }}>
-                <form className="row g-3" onSubmit={handleAddProduct}>
-                  <div className="col-md-4">
+              <div className="w-100 " style={{ maxWidth: "1000px" }}>
+                <form className="row g-3 " onSubmit={handleAddProduct}>
+                  <div className="col-md-4 mt-5 ">
                     <label for="validationCustom01" className="form-label">
-                      Product Name
+                      <h4>Product Name</h4>
                     </label>
                     <input
                       type="text"
@@ -73,9 +72,9 @@ const AddProduct = () => {
                       required
                     />
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4 mt-5">
                     <label for="validationCustom02" className="form-label">
-                      Add Price
+                      <h4>Add Price</h4>
                     </label>
                     <input
                       type="text"
@@ -87,9 +86,9 @@ const AddProduct = () => {
                     />
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-md-6 mt-5">
                     <label for="validationCustom03" className="form-label">
-                      Weight
+                      <h4>Weight</h4>
                     </label>
                     <input
                       type="text"
@@ -100,9 +99,9 @@ const AddProduct = () => {
                       required
                     />
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4 mt-5">
                     <label for="validationCustom02" className="form-label">
-                      Upload Your Image
+                      <h4>Upload Your Image</h4>
                     </label>
                     <input
                       type="file"
@@ -116,7 +115,7 @@ const AddProduct = () => {
                     {imgURL ? (
                       <>
                         <button className="btn btn-primary" type="submit">
-                          Submit
+                          Add Product
                         </button>
                       </>
                     ) : (
@@ -126,7 +125,7 @@ const AddProduct = () => {
                           disabled
                           type="submit"
                         >
-                          Submit
+                          Add Product
                         </button>
                       </>
                     )}

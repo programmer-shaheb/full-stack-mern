@@ -16,7 +16,10 @@ const Checkout = () => {
   }, [id]);
 
   const handleOrder = () => {
-    const orderInfo = { ...productDetail, isLoggedIn };
+    const createdAt = {
+      createdAt: new Date().toString(),
+    };
+    const orderInfo = { ...productDetail, isLoggedIn, ...createdAt };
 
     fetch("http://localhost:5055/addOrder", {
       method: "POST",

@@ -1,7 +1,11 @@
 # Hungry Helpers
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Hungry Helpers](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+This is a Food Delivery Website. You can find different types of food from here.
+
+## Programme Use
+
+Google Authentication, NoSQL Database, Mongodb, Express js, React js

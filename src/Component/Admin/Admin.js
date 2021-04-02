@@ -7,14 +7,18 @@ const Admin = () => {
     <>
       <div className="side-bar">
         <Link to="/home">
-          <h3>Hungry Helpers</h3>{" "}
+          <h3>Hungry Helpers</h3>
         </Link>
         <ul>
           <Link to="/addProduct">
-            <li>Add</li>
+            <li>
+              <h4>Add Products</h4>
+            </li>
           </Link>
           <Link to="/editProduct">
-            <li>Edit</li>
+            <li>
+              <h4>Manage Products</h4>
+            </li>
           </Link>
         </ul>
       </div>

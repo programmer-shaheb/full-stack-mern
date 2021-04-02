@@ -10,7 +10,7 @@ const EditProduct = () => {
       .then((data) => {
         setProductList(data);
       });
-  }, []);
+  }, [productList]);
 
   const handleDeleteProduct = (id) => {
     console.log(id);
@@ -29,20 +29,36 @@ const EditProduct = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-10 mx-auto">
-              <div className="row">
-                {productList.map((product) => (
-                  <>
-                    <div className="col-10">
-                      <h3>{product.productName}</h3>
-                      <button
-                        onClick={() => handleDeleteProduct(`${product._id}`)}
-                        className="btn btn-danger"
-                      >
-                        Delete Product
-                      </button>
-                    </div>
-                  </>
-                ))}
+              <div className="row ">
+                <table class="table table-bordered tab-case">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Weight</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {productList.map((product) => (
+                      <tr>
+                        <td>{product.productName}</td>
+                        <td>{product.price}</td>
+                        <td>{product.weight}</td>
+                        <td>
+                          <button
+                            onClick={() =>
+                              handleDeleteProduct(`${product._id}`)
+                            }
+                            className="btn btn-danger"
+                          >
+                            Delete Product
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

@@ -3,3 +3,8 @@
   left: 300px;
   top: 100px;
 }
+
+.addProduct h1 {
+  font-weight: bold;
+  color: #001327;
+}

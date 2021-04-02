@@ -18,15 +18,20 @@ const Order = () => {
         <div className="row">
           <div className="col-10 mx-auto">
             <div className="row">
-              <div className="col-md-4 col-10 mx-auto mt-4 mb-2">
-                <h3>Order </h3>
+              <div className=" col-10 mx-auto mt-4 mb-2">
+                <h2 className="text-success">Order History </h2>
                 <div class="d-flex justify-content-center">
                   {orderDetails.length === 0 && (
                     <img src={loader} alt="loader" />
                   )}
                 </div>
+                <h3>Your Email : {isLoggedIn} </h3>
                 {orderDetails.map((order) => (
-                  <li> {order.productName} </li>
+                  <div className=" bg-light rounded p-3 m-4 d-flex justify-content-around align-items-center">
+                    <h4> {order.productName} </h4>
+                    <h4> $ {order.price} </h4>
+                    <h4> {order.createdAt} </h4>
+                  </div>
                 ))}
               </div>
             </div>
