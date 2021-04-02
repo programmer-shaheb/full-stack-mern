@@ -5,7 +5,7 @@ import "./EditProduct.css";
 const EditProduct = () => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5055/products`)
+    fetch(`https://desolate-refuge-31632.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => {
         setProductList(data);
@@ -14,7 +14,7 @@ const EditProduct = () => {
 
   const handleDeleteProduct = (id) => {
     console.log(id);
-    fetch("http://localhost:5055/delete/" + id, {
+    fetch("https://desolate-refuge-31632.herokuapp.com/delete/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())

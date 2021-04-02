@@ -7,7 +7,9 @@ const Order = () => {
 
   const [orderDetails, setOrderDetails] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5055/orderInfo?email=${isLoggedIn}`)
+    fetch(
+      `https://desolate-refuge-31632.herokuapp.com/orderInfo?email=${isLoggedIn}`
+    )
       .then((res) => res.json())
       .then((data) => setOrderDetails(data));
   }, []);

@@ -1,6 +1,6 @@
 # Hungry Helpers
 
-This project was bootstrapped with [Hungry Helpers](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Hungry Helpers]().
 
 ## Features
 

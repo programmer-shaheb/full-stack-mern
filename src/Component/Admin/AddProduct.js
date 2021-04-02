@@ -16,7 +16,6 @@ const AddProduct = () => {
 
     axios.post("https://api.imgbb.com/1/upload", imageData).then((res) => {
       setImgURL(res.data?.data?.display_url);
-      console.log(res.data.data.display_url);
     });
   };
 
@@ -30,7 +29,7 @@ const AddProduct = () => {
       imgURL,
     };
 
-    fetch("http://localhost:5055/addProduct", {
+    fetch("https://desolate-refuge-31632.herokuapp.com/addProduct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(productData),

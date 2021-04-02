@@ -10,7 +10,7 @@ const Checkout = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5055/products/${id}`)
+    fetch(`https://desolate-refuge-31632.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data[0]));
   }, [id]);
@@ -21,7 +21,7 @@ const Checkout = () => {
     };
     const orderInfo = { ...productDetail, isLoggedIn, ...createdAt };
 
-    fetch("http://localhost:5055/addOrder", {
+    fetch("https://desolate-refuge-31632.herokuapp.com/addOrder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderInfo),
